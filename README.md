@@ -125,11 +125,3 @@ Once this was complete, we used the port address to add the video stream to our 
 
 [MJPG Streamer](https://wouterdeschuyter.be/blog/how-to-create-a-15-dollar-web-controllable-camera-with-a-raspberry-pi-zero)
 
------
-
-## Reminders
-
-- Video recording in landscape not to exceed 90s
-- Each team member appears in video
-- Make sure video permission is set accessible to the instructors
-- Repo is private
