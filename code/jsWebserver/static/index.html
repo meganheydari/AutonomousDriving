@@ -1,0 +1,191 @@
+<!-- ===============================================
+Created on 12/09/19.
+Copyright © 2018 Chase Clarke, Megan Heydari, Leila Lee. All rights reserved.
+=============================================== -->
+
+<html> 
+<head> 
+<title>Team8</title> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script src="/socket.io/socket.io.js"></script> 
+</head> 
+<script> 
+  var automated = false;
+  var direction = 2;
+
+var key = "";
+
+  function keyPress(ch, pressed) {
+
+    if (key == ch &&  pressed) {
+      return;
+    }
+
+    //keyup
+    else if (!pressed) {
+      console.log(ch, pressed);
+      key = "";
+      
+    }
+
+    //keydown
+    else {
+      console.log(ch, pressed);
+      key = ch;
+      
+    }
+
+    const keySet = new Set(["W","A","D"])
+    const keyToVal = {"W" : 0, "A" : 1,"D" : 2}
+    const valToString = {0 : "forward", 1 : "left", 2 : "right"}
+
+    if (keySet.has(ch)) {
+      direction = keyToVal[ch];
+    }
+    else if (ch == 'Q' && pressed) {
+      directionSocket.emit('data', ("{ \"key\" : " + 4 + ", \"pressed\" : " + pressed.toString() + " }"));
+      return;
+    }
+    else {
+      return;
+    }
+      $("#lastKey").text("Drive direction: " + valToString[direction]);
+      directionSocket.emit('data', ("{ \"key\" : " + direction + ", \"pressed\" : " + pressed.toString() + " }"));
+  }
+
+  function toggleMode() {
+    var modeToStringVal = "";
+
+    if (automated) {
+      modeToStringVal = "AUTOMATED";
+    }
+    else {
+      modeToStringVal = "MANUAL";
+    }
+    automated = !automated;
+    $("#printModeType").text("Drive mode: " + modeToStringVal);
+    modeSocket.emit('data', "{ \"mode\" : " + automated.toString() + "}");
+  }
+
+
+  // populates UI with defualt values on page load
+  window.onload = function(e){ 
+      toggleMode()
+      keyPress()
+  }
+
+  // recieves key presses and starts logic
+  // $(document).keypress(function(event){
+  //   keyPress();
+  // });
+
+  $(document).keydown(function(event){
+    var key = (event.keyCode ? event.keyCode : event.which); 
+    var ch=String.fromCharCode(key) 
+    keyPress(ch, 1);
+  });
+  $(document).keyup(function(event){
+    var key = (event.keyCode ? event.keyCode : event.which); 
+    var ch=String.fromCharCode(key) 
+    keyPress(ch, 0);
+  });
+
+  // socket for recieving communication from server
+  // will be used to show qr code contents and split times
+  var socket = io.connect('http://localhost:80');
+
+  socket.on('connectionestablished', function(data) {
+    console.log(data);
+  });
+  socket.on('time', function(data) {
+    console.log(data);
+    document.getElementById('time').innerHTML=data;
+  })
+
+
+  // socket for communicating back to the server
+  // sends the current mode upon change
+  let modeSocket = io.connect("http://localhost:5000/", {
+      reconnection: false
+  });
+
+  modeSocket.on('connect', function() {
+      console.log('Connected to server');
+  });
+
+  // socket for communicating back to the server
+  // sends the current direction upon change
+  let directionSocket = io.connect("http://localhost:5001/", {
+      reconnection: false
+  });
+
+  directionSocket.on('connect', function() {
+      console.log('Connected to server');
+  });
+</script> 
+
+<style type="text/css">
+  body {
+    background-color: grey;
+  }
+
+  .video {
+    border: 10px solid black;
+    border-radius: 5px;
+    transform: rotate(180deg);
+  }
+
+  .keyText {
+    margin: 1em;
+    font-weight: bold;
+  }
+
+  .button {
+    outline: none;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  .infoBox {
+    border: 2px solid black;
+    width: 50%;
+    margin-bottom: 1em;
+    background-color: white;
+  }
+</style>
+
+<body> 
+  <br><br> 
+  <center> 
+    <div class="infoBox">
+      <b><span id="time"></span></b>
+      <p class="keyText" id="lastKey"></p>
+      <a class="keyText" id="printModeType"></a>
+      <button onclick="toggleMode()" id="toggleMode" class="button button2">Toggle</button>
+    </div>
+  </center>
+  <center> 
+    <img class="video" src="http://raspberrypi.local:8080/?action=stream">
+  </center> 
+</body> 
+</html> 

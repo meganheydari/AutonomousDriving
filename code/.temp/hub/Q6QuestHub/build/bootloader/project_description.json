@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/Users/chaseclarke/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/Users/chaseclarke/esp/Q6QuestHub/build/bootloader",
+    "config_file":        "/Users/chaseclarke/esp/Q6QuestHub/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.1-dev-141-ga7e8d87d3",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/Users/chaseclarke/esp/esp-idf/components/efuse/Kconfig;/Users/chaseclarke/esp/esp-idf/components/esp32/Kconfig;/Users/chaseclarke/esp/esp-idf/components/esp_common/Kconfig;/Users/chaseclarke/esp/esp-idf/components/log/Kconfig;/Users/chaseclarke/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/chaseclarke/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/chaseclarke/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/chaseclarke/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/chaseclarke/esp/esp-idf/components/bootloader", "/Users/chaseclarke/esp/esp-idf/components/bootloader_support", "/Users/chaseclarke/esp/esp-idf/components/efuse", "/Users/chaseclarke/esp/esp-idf/components/esp32", "/Users/chaseclarke/esp/esp-idf/components/esp_common", "/Users/chaseclarke/esp/esp-idf/components/esp_rom", "/Users/chaseclarke/esp/esp-idf/components/esptool_py", "/Users/chaseclarke/esp/esp-idf/components/log", "/Users/chaseclarke/esp/esp-idf/components/bootloader/subproject/main", "/Users/chaseclarke/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/chaseclarke/esp/esp-idf/components/partition_table", "/Users/chaseclarke/esp/esp-idf/components/soc", "/Users/chaseclarke/esp/esp-idf/components/spi_flash", "/Users/chaseclarke/esp/esp-idf/components/xtensa", "" ]
+}

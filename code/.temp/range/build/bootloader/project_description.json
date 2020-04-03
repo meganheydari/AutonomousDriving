@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/Users/meganheydari/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/Users/meganheydari/esp/range/build/bootloader",
+    "config_file":        "/Users/meganheydari/esp/range/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.1-dev-369-g4dac7c7df",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/Users/meganheydari/esp/esp-idf/components/efuse/Kconfig;/Users/meganheydari/esp/esp-idf/components/esp32/Kconfig;/Users/meganheydari/esp/esp-idf/components/esp_common/Kconfig;/Users/meganheydari/esp/esp-idf/components/log/Kconfig;/Users/meganheydari/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/meganheydari/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/meganheydari/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/meganheydari/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/meganheydari/esp/esp-idf/components/bootloader", "/Users/meganheydari/esp/esp-idf/components/bootloader_support", "/Users/meganheydari/esp/esp-idf/components/efuse", "/Users/meganheydari/esp/esp-idf/components/esp32", "/Users/meganheydari/esp/esp-idf/components/esp_common", "/Users/meganheydari/esp/esp-idf/components/esp_rom", "/Users/meganheydari/esp/esp-idf/components/esptool_py", "/Users/meganheydari/esp/esp-idf/components/log", "/Users/meganheydari/esp/esp-idf/components/bootloader/subproject/main", "/Users/meganheydari/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/meganheydari/esp/esp-idf/components/partition_table", "/Users/meganheydari/esp/esp-idf/components/soc", "/Users/meganheydari/esp/esp-idf/components/spi_flash", "/Users/meganheydari/esp/esp-idf/components/xtensa", "" ]
+}

@@ -1,0 +1,13 @@
+# Target labels
+ mconf-idf
+# Source files and their labels
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/CMakeFiles/mconf-idf
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/CMakeFiles/mconf-idf.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/CMakeFiles/mconf-idf-complete.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule
+/Users/chaseclarke/esp/Q6QuestCrawler/build/bootloader/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule

@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/meganheydari/esp/Q6_Alpha/build/CMakeFiles/bootloader
+/Users/meganheydari/esp/Q6_Alpha/build/CMakeFiles/bootloader.rule
+/Users/meganheydari/esp/Q6_Alpha/build/CMakeFiles/bootloader-complete.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/meganheydari/esp/Q6_Alpha/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
