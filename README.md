@@ -1,11 +1,11 @@
 # Autonomous Driving 
-Authors: Chase Clarke, Megan Heydari, Leila Lee
+Authors: Megan Heydari, Partner 1, Partner 2 
 
 2019-12-09
 
 ## Summary
 
-This quest builds on top of quest 4 so that the previous autonomously navigating crawler could now stop and start itself based on IR signals sent by beacons and is also capable of being controlled manually through web interface. A webcam is also attached to the crawler for livestreaming video and decoding QR code through the web server. The webcam allows the user to navigate the crawler through keyboard presses on the web client.
+This project builds on top of Autonomous Driving Fundamentals which enabled a crawler to perform wall following and object detection. Now, the previous autonomously navigating crawler can stop and start itself based on IR signals sent by beacons and is also capable of being controlled manually through web interface. A webcam is also attached to the crawler for livestreaming video and decoding QR code through the web server. The webcam allows the user to navigate the crawler through keyboard presses on the web client.
 
 ## Evaluation Criteria
 
